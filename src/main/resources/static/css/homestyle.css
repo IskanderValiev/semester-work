@@ -1,0 +1,652 @@
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+
+@font-face {
+    font-family: Dusha;
+    src: url('/fonts/Dusha - FIFA World Cup 2018.otf');
+}
+
+body{
+    font-family: "Dusha", sans-serif;
+    color: #353535;
+    background-image: url('/images/background.png');
+    z-index: 1;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+}
+
+ul {
+    list-style: none;
+}
+
+.content {
+    width: 80%;
+    margin: auto;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    float: left;
+}
+
+#header {
+    width: 100%;
+    height: 40%;
+    z-index: 1;
+}
+
+.menu {
+    float: left;
+    margin: 12px 0px 0px 20px;
+    font-size: 25px;
+}
+
+.menu li {
+    margin: 0px 0px 10px 0px;
+    padding: 0px 10px 0px 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+#menu > ul {
+    display: flex;
+}
+
+#menu li ul {
+    position: absolute;
+    width: auto;
+    display: none;
+}
+
+#menu li:hover > ul {
+    display: block;
+}
+
+#menu li > ul li {
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    background: #971E00;
+    text-align: left;
+    margin: 5px 0px 0px -40px;
+}
+
+#menu li > ul li a {
+    padding: 10px;
+    text-transform: none;
+}
+
+.search {
+    margin: 12px 20px 0 0;
+}
+
+#profile-menu > ul {
+    display: flex;
+}
+
+
+.profile-menu {
+    float: right;
+    margin: 12px 20px 0px 0px;
+    font-size: 25px
+}
+
+.profile-menu li {
+    margin: 0px 0px 10px 0px;
+    padding: 0px 10px 0px 10px;
+}
+
+.profile-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+hr {
+    margin-top: 50px;
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+
+.sl {
+    margin: -7px;
+    position: relative;
+    z-index: 1;
+}
+
+/*Slides styles*/
+.sl_slide {
+    width: 100%;
+    position: relative;
+}
+
+.sl_text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.sl_header, .sl_desc {
+    margin:0;
+    padding: 0 10px;
+}
+
+.sl_header {
+    font-size: 22px;
+}
+
+.sl_desc {
+    font-size: 18px;
+}
+
+.sl_slide {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.sl_img {
+    width: 100%;
+    height: 100%;
+}
+
+.sl_slide img {
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+.sl_slide img:hover {
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+
+/*Information Style*/
+.information {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #971E00;
+    padding: 10px;
+    margin: 30px 5% 0 5%;
+    width: 88%;
+    overflow: hidden;
+}
+
+.block1 {
+    width: 25%;
+    height: 204px;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    border-radius: 5px;
+    margin: 10px 10px 0 10px;
+}
+
+.info_text {
+    color: white;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+}
+
+.block2 {
+    width: 45%;
+    height: 204px;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    border-radius: 5px;
+    margin: 10px 10px 0 10px;
+}
+
+.block1 img {
+    width: 100%;
+    height: 100%;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+.block1 img:hover {
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+
+.block2 img {
+    width: 100%;
+    height: 100%;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+.block2 img:hover {
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+
+.block3 {
+    width: 98%;
+    height: 204px;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    border-radius: 5px;
+    margin: 10px 10px 0 10px;
+}
+
+.block3 img {
+    width: 100%;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+.block3 img:hover {
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+
+/*Teams style*/
+.teams {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(151, 30, 0, 0.8);
+    padding: 10px;
+    margin: 30px 5% 0 5%;
+    width: 88%;
+    float: left;
+    border-radius: 10px;
+}
+
+.team {
+    background-color: #CCCC99;
+    position: relative;
+    width: 30%;
+    height: 225px;
+    margin: 50px 100px auto;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    padding: 5px;
+    float: left;
+}
+
+.team input {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 5px;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+.team input:hover {
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+
+.team_name {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*Players style*/
+.country {
+    margin: auto;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: auto;
+}
+
+.squad {
+    width: 88%;
+    margin: auto;
+    color: white;
+    margin-top: 10px;
+}
+
+.teamsquad {
+    border: 1px solid white;
+    collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    padding: 3px;
+    border: 2px solid white;
+    font-size: 18px;
+}
+
+
+/*News style*/
+.news {
+    width: 88%;
+    margin: 20px 5% 0 5% ;
+    text-align: center;
+    color: white;
+}
+
+.news a {
+
+    text-align: center;
+}
+
+.news h3 {
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 22px;
+    line-height: 50px;
+}
+
+.type {
+    width: 31.33%;
+    margin: 10px 1% 10px 1%;
+    float: left;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsBlock {
+    height: 250px;
+    overflow: hidden;
+    margin: 10px 0 10px 0;
+    position: relative;
+}
+
+/*.newsBlock h4{*/
+/*position: absolute;*/
+/*bottom: 0;*/
+/*}*/
+
+
+
+.news_text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+    max-height: 18px;
+}
+
+/*.news_text:hover {*/
+/*max-height: 50px;*/
+/*transition: 1s linear;*/
+/*}*/
+
+.news_header {
+    font-size: 18px;
+    color: white;
+}
+
+.type img {
+    width: 100%;
+    margin: auto;
+    height: 250px;
+    border-radius: 5px;
+    overflow: hidden;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+.type img:hover {
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+
+.add {
+    background-color: #971E00;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 20px;
+    float: left;
+    text-align: center;
+    margin: auto;
+}
+
+.add a {
+    color: #fff;
+}
+
+.newnews {
+    width: 88%;
+    margin: 20px 5% 0 5% ;
+    text-align: center;
+    float: left;
+}
+
+.newnews input {
+    float: left;
+    width: 100%;
+    margin: 10px 0 10px 0;
+}
+
+.newnews textarea {
+    float: left;
+    width: 100%;
+    resize: none;
+}
+
+.newnews input[name="imagePath"] {
+    float: left;
+    width: 85%;
+}
+
+.newnews input[type="submit"] {
+    margin: 10px 0 10px 0;
+}
+
+.newsImage {
+    width: 100%;
+    margin: auto;
+    height: 600px;
+    overflow: hidden;
+}
+
+.newsImage img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+.newsImage img:hover {
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+
+.newsHeader {
+    margin: auto;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.newsContent {
+    margin: auto;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.selected-news {
+    width: 80%;
+    margin: auto;
+}
+
+/* ============== Comments ============== */
+
+.comments {
+    width: 80%;
+    margin: auto;
+    color: white;
+}
+
+.comment {
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    margin: 20px 0 20px 0;
+    background: rgba(204, 204, 153, 0.7);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    clear:both;
+}
+
+.user {
+    float: left;
+    width: 20%;
+    height: 100%;
+    margin: 10px 10px 10px 10px;
+    color: white;
+}
+
+.commentText {
+    float: left;
+    width: 70%;
+    height: 100%;
+    margin: 10px 10px 10px 10px;
+    color: white;
+}
+
+
+.post-comment {
+    margin: 0 0 20px 0;
+}
+
+.post-comment input[type=text] {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+/*Адаптивность картинок и видео*/
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.vidres{
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.vidres iframe, .vidres embed, .vidres object{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*Используется для центрирования контента*/
+.mid{
+    max-width: 1170px; /*Укажите своё значение*/
+    margin: 0 auto;
+}
+
+/*Колонки - задаём свои, если чего то не хватает
+  по умолчанию используется расстояние в 4% между колонками*/
+.col25, .col33, .col50{
+    float: left;
+    margin: 0 4% 0 0;
+}
+
+.col25{ /*4 в ряд*/
+    width: 22%;
+}
+
+.col33{ /*3 в ряд*/
+    width: 30.6666666%;
+}
+
+.col50{ /*2 в ряд*/
+    width: 48%;
+}
+
+.col25:last-child,
+.col33:last-child,
+.col50:last-child{
+    margin: 0;
+}
+
+/*Очистка обтекания*/
+.mid:before, .cf:before, .mid:after, .cf:after{
+    content: " ";
+    display: table;
+}
+.mid:after, .cf:after{
+    clear: both;
+}
+
+/*Адаптивность*/
+@media screen and (max-width: 1200px){
+    .mid{
+        margin: 0 40px;
+    }
+}
+
+@media screen and (max-width: 980px){
+    .col25{
+        width: 50%;
+    }
+    .col25:nth-child(even){
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .mid{
+        margin: 0 20px;
+    }
+    .col25, .col33, .col50{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+}
